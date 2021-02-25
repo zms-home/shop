@@ -1,0 +1,51 @@
+.copyright {
+    min-height: 79px;
+    background-color: $black-light-color;
+
+    @include mobile {
+        min-height: 143px;
+    }
+
+
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 79px;
+
+        @include mobile {
+            flex-direction: column-reverse;
+            min-height: 143px;
+        }
+    }
+
+    &__link {
+        display: flex;
+    }
+
+    &__item {
+        width: 32px;
+        height: 32px;
+        padding: 9px;
+        background-color: $white-color;
+        align-items: center;
+        margin-left: 7px;
+
+        &:hover .item__svg {
+            fill: $white-color;
+        }
+
+        &-svg {
+            fill: $black-color;
+        }
+    }
+
+    &__item:hover {
+        background-color: $pink-dark-color;
+    }
+
+    &__text {
+        @include font(16px, 19px);
+        color: $white-color;
+    }
+}

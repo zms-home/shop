@@ -1,0 +1,183 @@
+.fetured {
+    display: flex;
+    flex-direction: column;
+
+    &__heading {
+        @include font(30px, 36px);
+        text-align: center;
+    }
+
+    &__text {
+        @include font(14px, 17px);
+        color: $grey-color;
+        text-align: center;
+        margin: 0 0 48px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @include tablets {
+            width: 768px;
+        }
+
+        @include mobile {
+            width: 375px;
+        }
+    }
+
+    &__item {
+        width: 360px;
+        background-color: $grey-light-color;
+        margin: 30px 0 0 10px;
+        position: relative;
+        margin-right: 20px;
+        margin-left: 20px;
+
+        &:hover .fetured__item-over-wrapper {
+            display: block;
+        }
+
+        @include tablets {
+            margin-left: 0;
+        }
+    }
+
+    &__btn {
+        @include font(14px, 17px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -200%);
+        display: flex;
+        color: $white-color;
+        border: 1px solid white;
+        padding: 13px 14px 16px 13px;
+    }
+
+    &__heading-item {
+        @include font(13px, 16px);
+        text-transform: uppercase;
+        padding: 25px 0 13px 18px;
+    }
+
+    &__text-item {
+        @include font(14px, 17px, 300);
+        color: $grey-dark-color;
+        padding: 0 0 16px 18px;
+    }
+
+    &__price {
+        @include font(16px, 19px);
+        color: $pink-dark-color;
+        padding: 0 0 20px 18px;
+    }
+
+    &__browse-product {
+        @include font(16px, 19px);
+        color: $pink-dark-color;
+        padding: 15px 38px;
+        background-color: transparent;
+        border: 1px solid $pink-dark-color;
+        margin: 49px auto 95px;
+    }
+
+    &__browse-product:hover {
+        background-color: $pink-dark-color;
+        color: $white-color;
+    }
+
+    .fetured__item-over-wrapper {
+        display: none;
+    }
+
+    .overlay {
+        width: 360px;
+        height: 420px;
+        background: rgba(58, 56, 56, 0.86);
+        position: absolute;
+        top: 0;
+    }
+
+    .fetured__btn-text {
+        padding-left: 13px;
+        align-self: center;
+    }
+
+    &__filter {
+        display: flex;
+        margin: 50px 0 64px 20px;
+    }
+
+    &__fill {
+        @include font(14px, 17px, 600);
+        display: flex;
+        text-transform: uppercase;
+        position: relative;
+    }
+
+    &__img {
+        position: absolute;
+        top: 3px;
+        left: 50px;
+    }
+
+    &__fil-details {
+        @include font(14px, 17px);
+        display: flex;
+        color: $grey-opas-color;
+        text-transform: uppercase;
+        position: absolute;
+        left: 42%;
+    }
+
+    &__list-item {
+        position: relative;
+        margin: 0 48px 0 0;
+    }
+
+    &__list-item::after {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 5px;
+        background-image: url(../img/arrow.png);
+        background-size: 10px 5px;
+        top: 7px;
+        right: -21px;
+    }
+
+    .pages {
+        @include font(16px, 19px);
+        color: $grey-color;
+        padding: 15px 38px;
+        background-color: transparent;
+        border: 1px solid $grey-color;
+        margin: 49px auto 95px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 14px;
+            background-image: url('../img/arrowBefore.png');
+            background-size: 8px 14px;
+            top: 19px;
+            left: 15px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 14px;
+            background-image: url('../img/arrowAfter.png');
+            background-size: 8px 14px;
+            top: 19px;
+            right: 15px;
+        }
+    }
+}
